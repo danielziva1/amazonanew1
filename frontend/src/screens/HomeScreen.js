@@ -19,6 +19,7 @@ export default function HomeScreen() {
  
     dispatch(listProducts({}));
 }, [dispatch]);
+console.log("PRODUCTS", products );
   return (
     <div>
       
