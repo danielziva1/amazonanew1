@@ -17,7 +17,7 @@ export default function HomeScreen() {
     
  
  
-  dispatch(listProducts());
+    dispatch(listProducts({}));
 }, [dispatch]);
   return (
     <div>

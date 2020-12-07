@@ -20,9 +20,16 @@ import ProductEditScreen from './screens/ProductEditScreen';
 import OrderListScreen from './screens/OrderListScreen';
 import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
+import SearchScreen from './screens/SearchScreen';
+import SearchBox from './components/SearchBox';
+import SellerRoute from './components/SellerRoute';
+import MapScreen from './screens/MapScreen';
+
+
 
 function App() {
   const cart = useSelector((state) => state.cart);
+ 
   const { cartItems } = cart;
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
@@ -30,14 +37,25 @@ function App() {
   const signoutHandler = () => {
     dispatch(signout());
   };
+ 
+ 
+
   return (
     <BrowserRouter>
       <div className="grid-container">
         <header className="row">
           <div>
+         
           <Link className="brand" to="/">
-         just name
+        Print Market
            </Link>
+          </div>
+          <div>
+            <Route
+              render={({ history }) => (
+                <SearchBox history={history}></SearchBox>
+              )}
+            ></Route>
           </div>
           <div>
           <Link to="/cart">
@@ -106,6 +124,7 @@ function App() {
             )}
           </div>
     </header>
+
     <main>
     <Route path="/cart/:id?" component={CartScreen}></Route>
     <Route path="/product/:id" component={ProductScreen} exact></Route>
@@ -135,13 +154,35 @@ function App() {
             path="/user/:id/edit"
             component={UserEditScreen}
           ></AdminRoute>
+             
+           <Route
+            path="/search/category/:category/name/:name/min/:min/max/:max/rating/:rating/order/:order"
+            component={SearchScreen}
+            exact
+          ></Route>
+         
       <PrivateRoute
             path="/profile"
             component={ProfileScreen}
           ></PrivateRoute>
+            <PrivateRoute path="/map" component={MapScreen}></PrivateRoute>
+           <Route
+            path="/search/name/:name?"
+            component={SearchScreen}
+            exact
+          ></Route>
+          
+           <SellerRoute
+            path="/productlist/seller"
+            component={ProductListScreen}
+          ></SellerRoute>
+          <SellerRoute
+            path="/orderlist/seller"
+            component={OrderListScreen}
+          ></SellerRoute>
       <Route path="/" component={HomeScreen} exact></Route>
     </main>
-    <footer className="row center">All right reserved</footer>
+    <footer className="row center">Daniel Ziva@</footer>
   </div>
 </BrowserRouter>
 );

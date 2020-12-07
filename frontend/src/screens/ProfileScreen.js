@@ -13,7 +13,7 @@ export default function ProfileScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-
+  
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
   const userDetails = useSelector((state) => state.userDetails);
