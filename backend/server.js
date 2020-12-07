@@ -24,9 +24,9 @@ mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/amazona', {
 
 app.use('/api/uploads', uploadRouter);
 app.use('/api/users', userRouter);
-app.use('/api/  ', productRouter);
-app.use('/api/orders', orderRouter);
 
+app.use('/api/orders', orderRouter);
+app.use('/api/products', productRouter);
 
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
