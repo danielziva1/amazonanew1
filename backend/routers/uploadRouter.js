@@ -12,11 +12,11 @@ const storage = multer.diskStorage({
     cb(null, `${Date.now()}.jpg`);
   },
 });
-/* const upload = multer({ storage }); */
+const upload = multer({ storage });
 const uploadRouter = express.Router();
-/* uploadRouter.post('/', isAuth, upload.single('image'), (req, res) => {
+uploadRouter.post('/', isAuth, upload.single('image'), (req, res) => {
   res.send(`/${req.file.path}`); 
-}); */
+});
 
 aws.config.update({
   accessKeyId: 'AKIAI3QJT5S7HKG2ESVQ',
