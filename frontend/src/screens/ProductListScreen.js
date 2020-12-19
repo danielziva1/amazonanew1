@@ -60,6 +60,7 @@ const deleteHandler = (product) => {
     dispatch(deleteProduct(product._id));
   }
   };
+  
   const createHandler = () => {
     dispatch(createProduct());
   };
