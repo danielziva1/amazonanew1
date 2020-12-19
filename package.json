@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@react-google-maps/api": "^1.13.0",
+    "aws-sdk": "^2.807.0",
     "bcryptjs": "^2.4.3",
     "build": "^0.1.4",
     "dotenv": "^8.2.0",
@@ -21,10 +22,12 @@
     "mongodb": "^3.6.3",
     "mongoose": "^5.11.2",
     "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
     "nodemon": "^2.0.6",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.1",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "save": "^2.4.0"
   },
   "devDependencies": {
     "eslint": "^7.14.0",
