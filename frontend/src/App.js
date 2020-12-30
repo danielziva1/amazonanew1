@@ -291,11 +291,16 @@ function App() {
     </main>
     <footer className="row center">
       <div >
-    שירות לקוחות
+        
+     שירות לקוחות
 נשמח לסייע ולהעניק מענה לכל שאלה:
 ימים א’-ה’ בין 09:00 – 17:00
-טלפון: 00533313049
+טלפון:0533313049
+
+
+<div>
 <Link>hotprint@gmail.com</Link>
+</div>
 </div>
 </footer>
   </div>

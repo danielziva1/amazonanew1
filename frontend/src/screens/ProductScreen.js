@@ -51,7 +51,6 @@
       alert('Please enter comment and rating');
     }
   };
-  
    return (
      <div>
     
@@ -61,7 +60,7 @@
          <MessageBox variant="danger">{error}</MessageBox>
        ) : (
          <div>
-           <Link to="/">בחזרה לעמוד  הבית</Link>
+           <Link to="/">בחזרה לעמוד הבית</Link>
            <div className="row top">
              <div className="col-2">
                <img
