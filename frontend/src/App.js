@@ -230,7 +230,11 @@ function App() {
       <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
       <Route path="/order/:id" component={OrderScreen}></Route>
       
-     
+      <AdminRoute
+            path="/productlist"
+            component={ProductListScreen}
+            
+          ></AdminRoute>
            <AdminRoute
             path="/productlist/pageNumber/:pageNumber"
             component={ProductListScreen}
