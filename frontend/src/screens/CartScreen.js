@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { addToCart, removeFromCart } from '../actions/cartActions';
 import MessageBox from '../components/MessageBox';
+import DeleteIcon from '@material-ui/icons/Delete';
+
 export default function CartScreen(props) {
   const productId = props.match.params.id;
   const qty = props.location.search
@@ -27,10 +29,10 @@ export default function CartScreen(props) {
   return (
     <div className="row top">
     <div className="col-2">
-      <h1>Shopping Cart</h1>
+      <h1>עגלת מוצרים</h1>
       {cartItems.length === 0 ? (
         <MessageBox>
-          Cart is empty. <Link to="/">Go Shopping</Link>
+          עגלת קניות ריקה. <Link to="/">המשך קניות</Link>
         </MessageBox>
       ) : (
         <ul>
@@ -63,14 +65,10 @@ export default function CartScreen(props) {
                     ))}
                   </select>
                 </div>
-                <div>${item.price}</div>
+                <div>₪{item.price}</div>
                 <div>
-                  <button
-                    type="button"
-                    onClick={() => removeFromCartHandler(item.product)}
-                  >
-                    Delete
-                  </button>
+                 
+                  <DeleteIcon  fontSize="large" type="button" onClick={() => removeFromCartHandler(item.product)}></DeleteIcon>
                 </div>
               </div>
             </li>
@@ -83,7 +81,7 @@ export default function CartScreen(props) {
         <ul>
           <li>
             <h2>
-              Subtotal ({cartItems.reduce((a, c) => a + c.qty, 0)} items) : $
+              סה"כ ({cartItems.reduce((a, c) => a + c.qty, 0)} מוצרים) : ₪
               {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
             </h2>
           </li>
@@ -94,7 +92,7 @@ export default function CartScreen(props) {
               className="primary block"
               disabled={cartItems.length === 0}
             >
-              Proceed to Checkout
+              התקדם לביצוע הרכישה 
             </button>
           </li>
         </ul>

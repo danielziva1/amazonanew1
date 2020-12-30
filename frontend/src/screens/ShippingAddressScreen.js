@@ -30,10 +30,10 @@ export default function ShippingAddressScreen(props) {
       <CheckoutSteps step1 step2></CheckoutSteps>
       <form className="form" onSubmit={submitHandler}>
         <div>
-          <h1>Shipping Address</h1>
+          <h1>כתובת למשלוח</h1>
         </div>
         <div>
-          <label htmlFor="fullName">Full Name</label>
+          <label htmlFor="fullName">שם מלא</label>
           <input
             type="text"
             id="fullName"
@@ -44,7 +44,7 @@ export default function ShippingAddressScreen(props) {
           ></input>
         </div>
         <div>
-          <label htmlFor="address">Address</label>
+          <label htmlFor="address">רחוב</label>
           <input
             type="text"
             id="address"
@@ -55,7 +55,7 @@ export default function ShippingAddressScreen(props) {
           ></input>
         </div>
         <div>
-          <label htmlFor="city">City</label>
+          <label htmlFor="city">עיר</label>
           <input
             type="text"
             id="city"
@@ -66,7 +66,7 @@ export default function ShippingAddressScreen(props) {
           ></input>
         </div>
         <div>
-          <label htmlFor="postalCode">Postal Code</label>
+          <label htmlFor="postalCode">מיקוד</label>
           <input
             type="text"
             id="postalCode"
@@ -77,7 +77,7 @@ export default function ShippingAddressScreen(props) {
           ></input>
         </div>
         <div>
-          <label htmlFor="country">Country</label>
+          <label htmlFor="country">מדינה</label>
           <input
             type="text"
             id="country"
@@ -90,7 +90,7 @@ export default function ShippingAddressScreen(props) {
         <div>
           <label />
           <button className="primary" type="submit">
-            Continue
+            המשך
           </button>
         </div>
       </form>

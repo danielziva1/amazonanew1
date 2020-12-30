@@ -7,6 +7,7 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { useDispatch, useSelector } from 'react-redux';
 import { listProducts } from '../actions/productActions';
+import SearchScreen from './SearchScreen';
 
 export default function HomeScreen() {
   const dispatch = useDispatch();
@@ -21,8 +22,8 @@ export default function HomeScreen() {
 }, [dispatch]);
 console.log("PRODUCTS", products );
   return (
-    <div>
-      
+    <div >
+      {/*
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
@@ -33,7 +34,8 @@ console.log("PRODUCTS", products );
             <Product key={product._id} product={product}></Product>
           ))}
         </div>
-      )}
+      )} */}
+      <SearchScreen/> 
     </div>
   );
 }

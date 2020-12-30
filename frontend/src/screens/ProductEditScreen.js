@@ -75,7 +75,6 @@ export default function ProductEditScreen(props) {
           Authorization: `Bearer ${userInfo.token}`,
         },
       });
-      console.log("GOT IMAGE", data);
       setImage(data);
       setLoadingUpload(false);
     } catch (error) {
