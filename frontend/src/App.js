@@ -30,7 +30,7 @@ import SearchBox from './components/SearchBox';
 import SellerRoute from './components/SellerRoute';
 import MapScreen from './screens/MapScreen';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
-import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+
 import ContactUsScreen from './screens/ContactUsScreen';
 import Button from '@material-ui/core/Button';
 
@@ -159,10 +159,6 @@ function App() {
             ></Route>
           </div>
              
-          <Link className="brand"   to="/contactus">
-           <WhatsAppIcon  fontSize ='large' ></WhatsAppIcon>
-           
-            </Link>
             <div></div>  
             <div></div>
             <div></div>  
@@ -175,6 +171,9 @@ function App() {
           <Link className="brand" to="/">
           קנבס אונליין
             </Link>
+          
+
+
             
     </header>
     
@@ -212,6 +211,12 @@ function App() {
         </aside>
 
     <main>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+<a href="https://chatwith.io/s/5fea28b2e0a12" className="floata" target="_blank">
+<i className="fa fa-whatsapp my-floata"></i>
+</a>
+   
+
     <Route path="/contactus" component={ContactUsScreen}></Route>
     <Route path="/seller/:id" component={SellerScreen}></Route>
     <Route path="/cart/:id?" component={CartScreen}></Route>
@@ -289,20 +294,70 @@ function App() {
       <Route path="/" component={HomeScreen} exact></Route>
      
     </main>
-    <footer className="row center">
-      <div >
-        
-     שירות לקוחות
-נשמח לסייע ולהעניק מענה לכל שאלה:
-ימים א’-ה’ בין 09:00 – 17:00
-טלפון:0533313049
+   
+    <footer className="footer-distributed">
+    <div className="foot">
+ <div className="footer-left">
+ 
+ <h3>Hot<span>Print</span></h3>
+ 
+ <p className="footer-links">
+   {/*
+ <a href="#">Home</a>
+ ·
+ <a href="#">Blog</a>
+ ·
+ <a href="#">Pricing</a>
+ ·
+ <a href="#">About</a>
+ ·
+ <a href="#">Faq</a>
+ ·
+ <a href="#">Contact</a> */}
+ </p>
+ 
+ <p className="footer-company-name">danielziva&copy; 2021</p>
+ </div>
+ 
+ <div className="footer-center">
+ 
+ <div>
+ <i className="fa fa-map-marker"></i>
+ <p><span>שוק הכרמל</span> תל אביב, ישראל</p>
+ </div>
+ 
+ <div>
+ <i className="fa fa-phone"></i>
+ <p>0533313049</p>
+ </div>
+ 
+ <div>
+ <i className="fa fa-envelope"></i>
+ <p><a href="mailto:support@company.com">hotprint@gmail.com</a></p>
+ </div>
+ 
+ </div>
+ 
+ <div className="footer-right">
+ 
+ <p className="footer-company-about">
+ <span>אודות</span>
+ Web Dev Trick is a blog for web designers, graphic designers, web developers &amp; SEO Learner.
+ </p>
+ 
+ <div className="footer-icons">
+ 
+ <a href="#"><i className="fa fa-facebook"></i></a>
+ <a href="#"><i className="fa fa-twitter"></i></a>
+ <a href="#"><i className="fa fa-linkedin"></i></a>
+ <a href="#"><i className="fa fa-github"></i></a>
+ 
+ </div>
+ 
+ </div>
+ </div>
+ </footer>
 
-
-<div>
-<Link>hotprint@gmail.com</Link>
-</div>
-</div>
-</footer>
   </div>
   
 </BrowserRouter>
@@ -310,3 +365,65 @@ function App() {
 }
 
 export default App;
+
+{/*<footer className="footer-distributed">
+ 
+<div class="footer-left">
+
+<h3>WebDev<span>Trick</span></h3>
+
+<p class="footer-links">
+<a href="#">Home</a>
+·
+<a href="#">Blog</a>
+·
+<a href="#">Pricing</a>
+·
+<a href="#">About</a>
+·
+<a href="#">Faq</a>
+·
+<a href="#">Contact</a>
+</p>
+
+<p class="footer-company-name">webdevtrick &copy; 2019</p>
+</div>
+
+<div class="footer-center">
+
+<div>
+<i class="fa fa-map-marker"></i>
+<p><span>21 Revolution Street</span> Delhi, India</p>
+</div>
+
+<div>
+<i class="fa fa-phone"></i>
+<p>+1 555 123456</p>
+</div>
+
+<div>
+<i class="fa fa-envelope"></i>
+<p><a href="mailto:support@company.com">contact@webdevtrick.com</a></p>
+</div>
+
+</div>
+
+<div class="footer-right">
+
+<p class="footer-company-about">
+<span>About the company</span>
+Web Dev Trick is a blog for web designers, graphic designers, web developers &amp; SEO Learner.
+</p>
+
+<div class="footer-icons">
+
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+<a href="#"><i class="fa fa-linkedin"></i></a>
+<a href="#"><i class="fa fa-github"></i></a>
+
+</div>
+
+</div>
+
+</footer> */}

@@ -74,6 +74,7 @@ export default function SearchScreen(props) {
             <option value="lowest">מחיר: נמוך לגבוה</option>
             <option value="highest">מחיר: גבוה לנמוך</option>
             <option value="toprated">ממוצע. סקירת לקוחות</option>
+            
           </select>
         </div>
       </div>
