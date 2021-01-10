@@ -66,7 +66,7 @@ const dispatch = useDispatch();
           <label />
           <div>
           New customer?{' '}
-            <Link to={`/register?redirect=${redirect}`}>
+            <Link className='didi' to={`/register?redirect=${redirect}`}>
               Create your account
             </Link>
           </div>

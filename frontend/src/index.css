@@ -7,13 +7,16 @@ body {
 background-color: rgb(255, 255, 255);
   height: 100vh;
   font-size: 1.6rem;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family:  "Courier New";
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;  
 }
+
+
 #root {
   height: 100%;
 }
+
 
 /* Layout */
 .grid-container {
@@ -54,7 +57,7 @@ h2 {
 
 a {
   text-decoration: none;
-  color: #d33282;
+  color: #000000;
   
 }
 a:hover {
@@ -81,10 +84,13 @@ button {
   font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  
 }
 button {
   background-color: #f8f8f8;
   cursor: pointer;
+  
  
 }
 input:hover,
@@ -109,6 +115,8 @@ a.brand {
   color: #ffffff;
   font-size: 3rem;
   font-weight: bold;
+
+  
 }
 .badge {
   background-color: #f02020;
@@ -117,6 +125,7 @@ a.brand {
   padding: 0.2rem 0.7rem;
   font-size: 1.4rem;
   margin-left: 0.2rem;
+
 }
 .row {
   display: flex;
@@ -124,9 +133,12 @@ a.brand {
   justify-content: space-between;
   align-items: center;
     direction: rtl;
+    
+    
 }
 .row.start {
   justify-content: flex-start;
+  
   
 }
 .col-3 {
@@ -138,13 +150,15 @@ a.brand {
 .row.center {
   justify-content: center;
   margin: 0.6rem;
-  
+ 
 }
 .row.top {
   align-items: flex-start;
 }
 .col-1 {
   flex: 1 1 25rem;
+  background-color: rgb(255, 255, 255);
+
   
 }
 .col-2 {
@@ -159,15 +173,16 @@ img {
   border-radius: 0.5rem;
 }
 img.medium {
-  max-width: 29rem;
   max-width: 20rem;
+  max-height: 22rem;
   width: 100%;
+
 }
 img.large {
   width: 70%;
 }
 img.small {
-  max-width: 5rem;
+  max-width: 10rem;
   width: 100%;
 }
 .success {
@@ -204,7 +219,7 @@ img.small {
   min-width: 12rem;
   padding: 1rem;
   z-index: 1;
-  background-color: #203040;
+  background-color:  #33383b;
   margin: 0;
   margin-top: 0.4rem;
   border-radius: 0.5rem;
@@ -231,6 +246,7 @@ img.small {
 .card {
   border: 0.1rem #c0c0c0 solid;
   background-color: #f8f8f8;
+
   border-radius: 0.5rem;
   margin: 1rem;
   box-shadow: 0 4px 8px 0 rgba(168, 34, 34, 0.2);
@@ -246,6 +262,7 @@ img.small {
 .card-body > * {
   margin-bottom: 0.5rem;
   color: #203040; 
+  
 }
 .price {
   font-size: 2rem;
@@ -259,6 +276,7 @@ img.medium {
   
   color: #f0c040;
   margin: 0.1rem;
+ 
 }
 .success {
   color: #20a020;
@@ -291,6 +309,7 @@ img.medium {
 }
 .table td,
 .table th {
+  
   text-align: left;
   border: 0.1rem solid #e4e4e4;
   padding: 0.5rem;
@@ -301,16 +320,20 @@ img.medium {
 /* Aside */
 aside {
   position: fixed;
+  right: 0px;
+  top: 0px;
   width: 30rem;
   height: 100%;
   background-color: #efefef;
+  direction: rtl;
   
   z-index: 1000;
-  transform: translateX(-80rem);
+  transform: translateX(80rem);
   transition: all 0.5s;
 }
 aside.open {
   transform: translateX(0);
+  
 }
 button.open-sidebar {
   font-size: 3rem;
@@ -319,6 +342,7 @@ button.open-sidebar {
   background: none;
   color: #ffffff;
   cursor: pointer;
+  
 }
 button.open-sidebar:hover {
   border-color: #ffffff;
@@ -326,6 +350,7 @@ button.open-sidebar:hover {
 aside ul {
   padding: 0;
   list-style: none;
+
   
 }
 aside li {
@@ -366,9 +391,6 @@ button.close-sidebar {
 .whatsapp{
   position: sticky;
   top: 550px;
- 
- 
- 
   display: table; font-family: sans-serif; text-decoration: cadetblue; margin:  left;
   color: #fff; font-size: 0.6em; padding: 1em ; border-radius: 2em;
    font-weight: bold; background: #25d366 url('https://tochat.be/click-to-chat-directory/css/whatsapp.svg')
@@ -389,6 +411,8 @@ button.close-sidebar {
   position: relative;
   display: flex;
   
+  
+  
 }
 
 .searchTerm {
@@ -400,6 +424,9 @@ button.close-sidebar {
   border-radius: 5px 0 0 5px;
   outline: none;
   color: #9DBFAF;
+  
+  
+  
 }
 
 .searchTerm:focus{
@@ -427,6 +454,8 @@ button.close-sidebar {
   font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #33383b;
+  color: white;
 }
 .pagination a.active {
   font-weight: bold;
@@ -451,16 +480,16 @@ button.close-sidebar {
 }
 
 .didi{
-  color: red;
+  color: rgb(0, 26, 255);
 }
 
 
 .carda {
-  border: 0.1rem #c0c0c0 solid;
-  background-color: #f8f8f8;
+  border: 0.1rem #140303 solid;
+  background-color: #ffffff;
   border-radius: 0.5rem;
   margin: 1rem;
-  box-shadow: 0 4px 8px 0 rgba(168, 34, 34, 0.2);
+  box-shadow: 2 1 1 2 rgb(0, 0, 0);
   transition: 0.9s;
 
   width: 196px;
@@ -480,7 +509,7 @@ button.close-sidebar {
 	position:fixed;
 	width:60px;
 	height:60px;
-	bottom:40px;
+	bottom:20px;
 	right:1200px;
 	background-color:#25d366;
 	color:#FFF;
@@ -709,3 +738,33 @@ footer{
 	color:  #5383d3;
   
 }
+.eden{
+  font-size: 14px;
+  font-family:  "Courier New";
+  
+}
+.edenn{
+  font-size: 22px;
+  font-family:  "Courier New";
+  ;
+}
+.mor{
+  color: #db3c7e;
+}
+
+
+.pozi{
+  direction: rtl;
+}
+
+
+.tak{
+  direction: rtl;
+  color: #342a2e;
+  font-family:  "Courier New";
+  font-weight: bold;
+}
+
+
+
+ 

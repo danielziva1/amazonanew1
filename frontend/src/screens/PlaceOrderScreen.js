@@ -8,17 +8,20 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 
 export default function PlaceOrderScreen(props) {
+  
   const cart = useSelector((state) => state.cart);
   if (!cart.paymentMethod) {
     props.history.push('/payment');
   }
+ 
   const orderCreate = useSelector((state) => state.orderCreate);
   const { loading, success, error, order } = orderCreate;
   const toPrice = (num) => Number(num.toFixed(2)); // 5.123 => "5.12" => 5.12
+ 
   cart.itemsPrice = toPrice(
     cart.cartItems.reduce((a, c) => a + c.qty * c.price, 0)
   );
-  cart.shippingPrice = cart.itemsPrice > 10 ? toPrice(0) : toPrice(0);
+  cart.shippingPrice = cart.itemsPrice > 200 ? toPrice(5) : toPrice(10);
   cart.taxPrice = toPrice(0.0 * cart.itemsPrice);
   cart.totalPrice = cart.itemsPrice + cart.shippingPrice + cart.taxPrice;
   const dispatch = useDispatch();
@@ -127,6 +130,7 @@ export default function PlaceOrderScreen(props) {
                   onClick={placeOrderHandler}
                   className="primary block"
                   disabled={cart.cartItems.length === 0}
+                    
                 >
                   Place Order
                 </button>

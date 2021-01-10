@@ -52,15 +52,17 @@
     }
   };
    return (
-     <div>
+     <div  >
     
     {loading ? (
          <LoadingBox></LoadingBox>
        ) : error ? (
          <MessageBox variant="danger">{error}</MessageBox>
        ) : (
-         <div>
-           <Link to="/">בחזרה לעמוד הבית</Link>
+         <div >
+           
+           <Link className='mor' to="/">בחזרה לעמוד הבית</Link>
+           
            <div className="row top">
              <div className="col-2">
                <img

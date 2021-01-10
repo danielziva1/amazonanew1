@@ -61,7 +61,7 @@ function App() {
   }, [dispatch]);
   return (
     <BrowserRouter>
- 
+  
       <div className="grid-container">  
         <header className="row">
           <div>
@@ -123,7 +123,7 @@ function App() {
                     <Link to="/productlist/seller">מוצרים</Link>
                   </li>
                   <li>
-                    <Link >הזמנות</Link>
+                    <Link to="/orderlist/seller">הזמנות</Link>
                   </li>
                 </ul>
               </div>
@@ -151,6 +151,7 @@ function App() {
               </div>
             )}
           </div>
+          {/* 
           <div>
             <Route
               render={({ history }) => (
@@ -158,7 +159,7 @@ function App() {
               )}
             ></Route>
           </div>
-             
+             */}
             <div></div>  
             <div></div>
             <div></div>  
@@ -166,13 +167,12 @@ function App() {
             <div></div>  
             <div></div>
             <div></div>  
-            <div></div> 
+            <div ></div> 
             
-          <Link className="brand" to="/">
+          <Link className="brand" to="/search/name/" >
           קנבס אונליין
             </Link>
           
-
 
             
     </header>
@@ -302,18 +302,16 @@ function App() {
  <h3>Hot<span>Print</span></h3>
  
  <p className="footer-links">
-   {/*
- <a href="#">Home</a>
+   
+ <a href="/">עמוד הבית</a>
  ·
- <a href="#">Blog</a>
+ <a href="/contactUs">תקנון האתר</a>
  ·
- <a href="#">Pricing</a>
+
+ <a href="#">אודות</a>
  ·
- <a href="#">About</a>
- ·
- <a href="#">Faq</a>
- ·
- <a href="#">Contact</a> */}
+
+ <a href="#">צור קשר</a> 
  </p>
  
  <p className="footer-company-name">danielziva&copy; 2021</p>

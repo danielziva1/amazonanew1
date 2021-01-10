@@ -5,9 +5,11 @@ export default function SearchBox(props) {
   const submitHandler = (e) => {
     e.preventDefault();
     props.history.push(`/search/name/${name}`);
+    
   };
   return (
-    
+ 
+
     <form className="search" onSubmit={submitHandler}>
       <div className="row">
         <input

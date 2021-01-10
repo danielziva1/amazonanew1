@@ -19,6 +19,7 @@ export default function OrderScreen(props) {
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
   const orderPay = useSelector((state) => state.orderPay);
+  
   const {
     loading: loadingPay,
     error: errorPay,
@@ -34,12 +35,15 @@ export default function OrderScreen(props) {
   useEffect(() => {
     const addPayPalScript = async () => {
         const { data } = await Axios.get('/api/config/paypal');
+       
         const script = document.createElement('script');
         script.type = 'text/javascript';
-        script.src = `https://www.paypal.com/sdk/js?client-id=${data}`;
+        script.src = `https://www.paypal.com/sdk/js?client-id=${data}&currency=ILS`;
         script.async = true;
         script.onload = () => {
           setSdkReady(true);
+        
+         
         };
         document.body.appendChild(script);
       };
@@ -176,7 +180,7 @@ export default function OrderScreen(props) {
                     <strong> סה"כ הזמנה</strong>
                   </div>
                   <div>
-                    <strong>₪{order.totalPrice.toFixed(2)}</strong>
+                    <strong >₪{order.totalPrice.toFixed(2)}</strong>
                   </div>
                 </div>
               </li>
@@ -192,7 +196,9 @@ export default function OrderScreen(props) {
                     {loadingPay && <LoadingBox></LoadingBox>}
 
                     <PayPalButton
-                      amount={order.totalPrice}
+                      
+                      amount={order.totalPrice }
+                      currency="ILS"
                       onSuccess={successPaymentHandler}
                     ></PayPalButton>
                   </>

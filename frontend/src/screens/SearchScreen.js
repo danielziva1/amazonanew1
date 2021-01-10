@@ -7,8 +7,12 @@ import MessageBox from '../components/MessageBox';
 import Product from '../components/Product';
 import Rating from '../components/Rating';
 import { prices, ratings } from '../utils';
-
+import { BrowserRouter, Route } from 'react-router-dom';
+import SearchBox from '../components/SearchBox';
+import Button from '@material-ui/core/Button';
 export default function SearchScreen(props) {
+
+  
   const {
     name = 'all',
     category = 'all',
@@ -52,28 +56,50 @@ export default function SearchScreen(props) {
     const filterMax = filter.max ? filter.max : filter.max === 0 ? 0 : max;
     return `/search/category/${filterCategory}/name/${filterName}/min/${filterMin}/max/${filterMax}/rating/${filterRating}/order/${sortOrder}/pageNumber/${filterPage}`;
   };
+
+  
   return (
     <div>
       <div className="row">
+        
+      <div>
+        <BrowserRouter>
+  
+            </BrowserRouter>
+            {loading ? (
+          <LoadingBox></LoadingBox>
+        ) : error ? (
+          <MessageBox variant="danger">{error}</MessageBox>
+        ) : (
+          <Route
+          render={({ history }) => (
+            <SearchBox history={history}></SearchBox>
+          )}
+        ></Route>
+
+        )}
+          </div>
+        
         {loading ? (
           <LoadingBox></LoadingBox>
         ) : error ? (
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
-          <div>{products.length} תוצאות</div>
+          <div className="eden"><h1>{products.length} תוצאות</h1></div>
         )}
-        <div>
+        <div  >
           מיין לפי{' '}
-          <select
+          <select className='eden'
             value={order}
             onChange={(e) => {
               props.history.push(getFilterUrl({ order: e.target.value }));
             }}
           >
+
             <option value="newest">החדשים ביותר</option>
             <option value="lowest">מחיר: נמוך לגבוה</option>
             <option value="highest">מחיר: גבוה לנמוך</option>
-            <option value="toprated">ממוצע. סקירת לקוחות</option>
+            <option value="toprated">ממוצע: סקירת לקוחות</option>
             
           </select>
         </div>
@@ -89,43 +115,63 @@ export default function SearchScreen(props) {
             ) : (
               <ul >
                 <li>
-                  
+                  <div>
+                    <Button>
+                      
                   <Link 
                     className={'all' === category ? 'active' : ''}
                     to={getFilterUrl({ category: 'all' })}
                   >
                     הכל
                   </Link>
+                  
+                  </Button>
+                  </div>
                 </li>
                 {categories.map((c) => (
                   <li key={c} className="toto">
+                      <Button>
                     <Link 
                       className={c === category ? 'active' : ''}
                       to={getFilterUrl({ category: c })}
                     >
+                      <div className='eden'>
                       {c}
+                      </div>
                     </Link>
+                    </Button>
                   </li>
                 ))}
               </ul>
             )}
           </div>
           <div>
+          
             <h3>מחיר</h3>
             <ul>
               {prices.map((p) => (
                 <li key={p.name}>
+             
+                  <Button >
+                  
                   <Link
                     to={getFilterUrl({ min: p.min, max: p.max })}
                     className={
                       `${p.min}-${p.max}` === `${min}-${max}` ? 'active' : ''
                     }
                   >
+                    <div className='eden'>
                     {p.name}
+                    </div>
+                
                   </Link>
+               
+                  </Button>
+               
                 </li>
               ))}
             </ul>
+         
           </div>
           <div>
             <h3>ממוצע סקירת לקוחות</h3>
@@ -153,6 +199,17 @@ export default function SearchScreen(props) {
               {products.length === 0 && (
                 <MessageBox>No Product Found</MessageBox>
               )}
+                     <div className="row center pagination">
+                {[...Array(pages).keys()].map((x) => (
+                  <Link
+                    className={x + 1 === page ? 'active' : ''}
+                    key={x + 1}
+                    to={getFilterUrl({ page: x + 1 })}
+                  >
+                    {x + 1}
+                  </Link>
+                ))}
+              </div>
               <div className="row center">
                 {products.map((product) => (
                   <Product key={product._id} product={product}></Product>

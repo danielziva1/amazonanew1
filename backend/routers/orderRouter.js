@@ -49,6 +49,8 @@ orderRouter.post(
         taxPrice: req.body.taxPrice,
         totalPrice: req.body.totalPrice,
         user: req.user._id,
+        
+        
       });
       const createdOrder = await order.save();
       res
@@ -131,5 +133,24 @@ orderRouter.get(
       }
     })
   );
+
+  orderRouter.get(
+  '/',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const orders = await Order.find({}).populate('user', 'name');
+    res.send(orders);
+  })
+);
+orderRouter.get(
+  '/',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const orders = await Order.find({}).populate('user', 'name');
+    res.send(orders);
+  })
+);
   
 export default orderRouter;

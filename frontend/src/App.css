@@ -13,6 +13,7 @@
   }
 }
 
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -40,11 +41,15 @@
   border-radius: 0 0.5rem 0.5rem 0;
   border-right: none;
   margin-right: 0.1rem;
+  
+  
 }
 .search input {
   border-radius: 0.5rem 0 0 0.5rem;
   border-right: none;
   margin-left: 0.5rem;
+  
+  
 }
 .active {
   font-weight: bold;
