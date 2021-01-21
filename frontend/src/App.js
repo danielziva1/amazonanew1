@@ -33,6 +33,8 @@ import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 
 import ContactUsScreen from './screens/ContactUsScreen';
 import Button from '@material-ui/core/Button';
+import PolicyScreen from './screens/policyScreen';
+import aboutScreen from './screens/aboutScreen';
 
 
 
@@ -61,7 +63,7 @@ function App() {
   }, [dispatch]);
   return (
     <BrowserRouter>
-  
+   
       <div className="grid-container">  
         <header className="row">
           <div>
@@ -150,6 +152,7 @@ function App() {
                 
               </div>
             )}
+               <Link to="/about">קצת עלינו</Link>
           </div>
           {/* 
           <div>
@@ -170,7 +173,7 @@ function App() {
             <div ></div> 
             
           <Link className="brand" to="/search/name/" >
-          קנבס אונליין
+              HotPrint
             </Link>
           
 
@@ -179,7 +182,9 @@ function App() {
     
     <aside className={sidebarIsOpen ? 'open' : ''}>
           <ul className="categories">
+        
             <li>
+
               <strong>תמונות לפי קטגוריה</strong>
               <button
                 onClick={() => setSidebarIsOpen(false)}
@@ -188,7 +193,15 @@ function App() {
               >
                 <i className="fa fa-close"></i>
               </button>
+              
             </li>
+            <div>
+            <Route
+              render={({ history }) => (
+                <SearchBox history={history}></SearchBox>
+              )}
+            ></Route>
+          </div>
             {loadingCategories ? (
               <LoadingBox></LoadingBox>
             ) : errorCategories ? (
@@ -211,13 +224,15 @@ function App() {
         </aside>
 
     <main>
+      
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
 <a href="https://chatwith.io/s/5fea28b2e0a12" className="floata" target="_blank">
 <i className="fa fa-whatsapp my-floata"></i>
 </a>
-   
-
+     
+<Route path="/about" component={aboutScreen}></Route>
     <Route path="/contactus" component={ContactUsScreen}></Route>
+    <Route path="/policy" component={PolicyScreen}></Route> 
     <Route path="/seller/:id" component={SellerScreen}></Route>
     <Route path="/cart/:id?" component={CartScreen}></Route>
     <Route path="/product/:id" component={ProductScreen} exact></Route>
@@ -297,7 +312,7 @@ function App() {
    
     <footer className="footer-distributed">
     <div className="foot">
- <div className="footer-left">
+ <div className="footer-left">  
  
  <h3>Hot<span>Print</span></h3>
  
@@ -305,13 +320,13 @@ function App() {
    
  <a href="/">עמוד הבית</a>
  ·
- <a href="/contactUs">תקנון האתר</a>
+ <a href="/policy">תקנון האתר</a>
  ·
 
- <a href="#">אודות</a>
+ <a href="/about  ">אודות</a>
  ·
 
- <a href="#">צור קשר</a> 
+ <a href="/contactus">צור קשר</a> 
  </p>
  
  <p className="footer-company-name">danielziva&copy; 2021</p>
@@ -345,10 +360,10 @@ function App() {
  
  <div className="footer-icons">
  
- <a href="#"><i className="fa fa-facebook"></i></a>
+ <a href="https://www.facebook.com/canvashotprint.canvashotprint"><i className="fa fa-facebook"></i></a>
+ <a href=" http://www.instagram.com/canvashotprint"><i className="fa fa-instagram"></i></a>
+ <a href="#"><i className="fa fa-youtube"></i></a>
  <a href="#"><i className="fa fa-twitter"></i></a>
- <a href="#"><i className="fa fa-linkedin"></i></a>
- <a href="#"><i className="fa fa-github"></i></a>
  
  </div>
  
