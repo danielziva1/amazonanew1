@@ -59,9 +59,10 @@ export default function SearchScreen(props) {
 
   
   return (
-    <div>
+    <div >
+   {/* <div className="edennn"></div>  */}
       <div className="row">
-        
+      {/* <div className="ship"> משלוח אקספרס חינם בהזמנה מעל 300 ₪</div>*/}
       <div>
         <BrowserRouter>
   
@@ -104,8 +105,11 @@ export default function SearchScreen(props) {
           </select>
         </div>
       </div>
+      
       <div className="row top">
+        <div className="lini">
         <div className="col-1">
+          </div>
           <h3>קטגוריה</h3>
           <div  >
             {loadingCategories ? (
@@ -115,11 +119,11 @@ export default function SearchScreen(props) {
             ) : (
               <ul >
                 <li>
-                  <div>
-                    <Button>
+                  <div className="edenn">
+                    <Button >
                       
-                  <Link 
-                    className={'all' === category ? 'active' : ''}
+                  <Link className="eden"
+                 
                     to={getFilterUrl({ category: 'all' })}
                   >
                     הכל
@@ -199,7 +203,7 @@ export default function SearchScreen(props) {
               {products.length === 0 && (
                 <MessageBox>No Product Found</MessageBox>
               )}
-                     <div className="row center pagination">
+            {/*  <div className="row center pagination">
                 {[...Array(pages).keys()].map((x) => (
                   <Link
                     className={x + 1 === page ? 'active' : ''}
@@ -210,6 +214,7 @@ export default function SearchScreen(props) {
                   </Link>
                 ))}
               </div>
+              */}
               <div className="row center">
                 {products.map((product) => (
                   <Product key={product._id} product={product}></Product>
@@ -230,6 +235,8 @@ export default function SearchScreen(props) {
           )}
         </div>
       </div>
+      
     </div>
+
   );
 }
