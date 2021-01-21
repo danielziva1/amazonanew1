@@ -177,7 +177,7 @@ export default function SearchScreen(props) {
             </ul>
          
           </div>
-          <div>
+          <div className='eden'>
             <h3>ממוצע סקירת לקוחות</h3>
             <ul>
               {ratings.map((r) => (

@@ -355,7 +355,9 @@ function App() {
  
  <p className="footer-company-about">
  <span>אודות</span>
- Web Dev Trick is a blog for web designers, graphic designers, web developers &amp; SEO Learner.
+ .The world is the canvas of your dreams
+שנים של ניסיון בהדפסת תמונות על קנבס בשלל גדלים.
+ איכות מובטחת!
  </p>
  
  <div className="footer-icons">

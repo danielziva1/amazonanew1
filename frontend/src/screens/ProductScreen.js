@@ -92,7 +92,8 @@
              <div className="col-1">
                <div className="card card-body">
                  <ul>
-                   
+              
+
                    <li>
                      <div className="row">
                        <div>מחיר</div>
@@ -115,6 +116,7 @@
                     <>
                       <li>
                         <div className="row">
+                          
                           <div>Qty</div>
                           <div>
                             <select
@@ -130,6 +132,7 @@
                               )}
                             </select>
                           </div>
+
                         </div>
                       </li>
                       <li>
@@ -218,3 +221,13 @@
   );
 }
  
+
+
+{/*                          <select name="pets" id="pet-select">
+    <option value="">--בחר את המידות של התמונה--</option>
+    <option value="dog">40X40</option>
+    <option value="cat">30X50</option>
+    <option value="hamster">44X70</option>
+    <option value="parrot">40X90</option>
+ 
+</select>*/}
