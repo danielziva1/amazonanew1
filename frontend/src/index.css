@@ -1111,7 +1111,7 @@ input:focus, textarea:focus {
 
 
 .picsize{
-  background-image: url("picsize.jpg");
+
   background-repeat: no-repeat;
   background-size: 300px 300px;
   background-position: left;
@@ -1180,7 +1180,7 @@ input:focus, textarea:focus {
 }
 
 .picii{
-  background-image: url("dddddd.jpg");
+
   height: 300px;
   width: 1247px;
 
@@ -1312,7 +1312,7 @@ color: white;
 }
 
 .piciiii{
-  background-image: url("ddd.jpg");
+
   width: 22rem;
  height: 18.0rem;
 
@@ -1325,7 +1325,7 @@ font-size: 30px;
 
 
 .pii{
-  background-image: url("dddd.jpg");
+
   width: 22rem;
  height: 18.0rem;
 
@@ -1349,7 +1349,7 @@ font-size: 30px;
 
 }
 .m{
-  background-image: url('lions.jpg');
+
   min-width: 22rem;
  height: 18.0rem;
 

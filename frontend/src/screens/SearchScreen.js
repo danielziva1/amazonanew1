@@ -17,11 +17,11 @@ import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 export default function SearchScreen(props) {
 
  let  tr = '/category/tr.png'
- let  e ='/images/dddd.jpg'
+
  let cover = '/category/cover.png'
  
  let  dog ='/category/dog.png'
- let  f ='/images/p3.jpg'
+
  let paint = '/category/paint.png'
 let sale = '/category/sale.png'
 let animals = '/category/animals3.png'
