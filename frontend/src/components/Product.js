@@ -8,20 +8,27 @@ export default function Product(props) {
   return (
     
     <div key={product._id} className="carda">
-      <Link to={`/product/${product._id}`}>
+      <Link  to={`/product/${product._id}`}>
         <img className="medium" src={product.image} alt={product.name} />
+    
      </Link>
+     
       <div className="carda-body">
       <Link to={`/product/${product._id}`}>
-          <h2>{product.name}</h2>
+          <h2 className='trying'>{product.name}</h2>
+          
         </Link>
-        <Rating
+       {/*<div className="">
+         <div className='d'> גודל התמונה:</div>
+          {product.brand }</div> 
+          */} 
+       {/* <Rating
           rating={product.rating}
           numReviews={product.numReviews}
-        ></Rating>
-        <div className="price">₪{product.price }</div> 
+        ></Rating> */}
+        <div className="tryingg">החל מ ₪{product.price }</div> 
         <Link to={`/product/${product._id}`}>
-        <input  to={`/product/${product._id}`} type="submit" value="רכישה" id="buttonn-blue"/>
+        <input  to={`/product/${product._id}`} type="submit" value="הוסף לעגלת קניות " id="buttonn-blue"/>
         </Link>
        
           

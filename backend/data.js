@@ -29,6 +29,7 @@ const data = {
       image: '/images/p1.jpg',
       price: 120,
       countInStock: 10,
+      sizeInStock:3,
       brand: 'Nike',
       rating: 4.5,
       numReviews: 10,
@@ -53,6 +54,7 @@ const data = {
       image: '/images/p3.jpg',
       price: 220,
       countInStock: 0,
+      sizeInStock:3,
       brand: 'Lacoste',
       rating: 4.8,
       numReviews: 17,
@@ -65,6 +67,7 @@ const data = {
       image: '/images/p4.jpg',
       price: 78,
       countInStock: 15,
+      sizeInStock:3,
       brand: 'Nike',
       rating: 4.5,
       numReviews: 14,
@@ -77,6 +80,7 @@ const data = {
       image: '/images/p5.jpg',
       price: 65,
       countInStock: 5,
+      sizeInStock:3,
       brand: 'Puma',
       rating: 4.5,
       numReviews: 10,
@@ -89,6 +93,7 @@ const data = {
       image: '/images/p6.jpg',
       price: 139,
       countInStock: 12,
+      sizeInStock: 3,
       brand: 'Adidas',
       rating: 4.5,
       numReviews: 15,
@@ -98,3 +103,5 @@ const data = {
   ],
 };
 export default data;
+
+

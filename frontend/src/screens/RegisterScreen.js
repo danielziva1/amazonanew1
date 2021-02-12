@@ -36,12 +36,12 @@ export default function RegisterScreen(props) {
     <div>
       <form className="form" onSubmit={submitHandler}>
         <div>
-          <h1>Create Account</h1>
+          <h1>צור חשבון</h1>
         </div>
         {loading && <LoadingBox></LoadingBox>}
         {error && <MessageBox variant="danger">{error}</MessageBox>}
         <div>
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">שם פרטי</label>
           <input
             type="text"
             id="name"
@@ -51,7 +51,7 @@ export default function RegisterScreen(props) {
           ></input>
         </div>
         <div>
-          <label htmlFor="email">Email address</label>
+          <label htmlFor="email">כתובת אימייל</label>
           <input
             type="email"
             id="email"
@@ -61,7 +61,7 @@ export default function RegisterScreen(props) {
           ></input>
         </div>
         <div>
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">סיסמה</label>
           <input
             type="password"
             id="password"
@@ -71,7 +71,7 @@ export default function RegisterScreen(props) {
           ></input>
         </div>
         <div>
-          <label htmlFor="confirmPassword">Confirm Password</label>
+          <label htmlFor="confirmPassword">אשר סיסמה</label>
           <input
             type="password"
             id="confirmPassword"
@@ -83,14 +83,15 @@ export default function RegisterScreen(props) {
         <div>
           <label />
           <button className="primary" type="submit">
-            Register
+           הירשם
           </button>
         </div>
         <div>
           <label />
           <div>
-            Already have an account?{' '}
-            <Link to={`/signin?redirect=${redirect}`}>Sign-In</Link>
+          כבר יש  לך חשבון?{' '}
+            <Link className='didi' to={`/signin?redirect=${redirect}`}>הירשם</Link>
+       
           </div>
         </div>
       </form>

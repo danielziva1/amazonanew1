@@ -32,12 +32,12 @@ const dispatch = useDispatch();
     <div>
       <form className="form" onSubmit={submitHandler}>
         <div>
-          <h1>Sign In</h1>
+          <h1>כניסה</h1>
         </div>
         {loading && <LoadingBox></LoadingBox>}
         {error && <MessageBox variant="danger">{error}</MessageBox>}
         <div>
-          <label htmlFor="email">Email address</label>
+          <label htmlFor="email">כתובת אימייל</label>
           <input
             type="email"
             id="email"
@@ -47,7 +47,7 @@ const dispatch = useDispatch();
           ></input>
         </div>
         <div>
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">סיסמה</label>
           <input
             type="password"
             id="password"
@@ -59,17 +59,19 @@ const dispatch = useDispatch();
         <div>
           <label />
           <button className="primary" type="submit">
-            Sign In
+            כניסה
           </button>
         </div>
         <div>
           <label />
           <div>
-          New customer?{' '}
+          לקוח חדש?{' '}
             <Link className='didi' to={`/register?redirect=${redirect}`}>
-              Create your account
+             הירשם אלינו  
             </Link>
+
           </div>
+          
         </div>
       </form>
     </div>

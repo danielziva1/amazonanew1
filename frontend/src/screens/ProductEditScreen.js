@@ -159,6 +159,7 @@ export default function ProductEditScreen(props) {
                 onChange={(e) => setBrand(e.target.value)}
               ></input>
             </div>
+            
             <div>
               <label htmlFor="countInStock">Count In Stock</label>
               <input
@@ -192,3 +193,5 @@ export default function ProductEditScreen(props) {
     </div>
   );
 }
+
+

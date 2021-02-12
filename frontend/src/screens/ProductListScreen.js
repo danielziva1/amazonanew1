@@ -91,11 +91,11 @@ const deleteHandler = (product) => {
           <thead>
             <tr>
               <th>ID</th>
-              <th>NAME</th>
-              <th>PRICE</th>
-              <th>CATEGORY</th>
-              <th>BRAND</th>
-              <th>ACTIONS</th>
+              <th>שם</th>
+              <th>מחיר</th>
+              <th>קטגוריה</th>
+              <th>מידה</th>
+              <th>פעולות</th>
               </tr>
               </thead>
             <tbody>
