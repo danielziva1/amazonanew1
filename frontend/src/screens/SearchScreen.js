@@ -113,8 +113,8 @@ let view = '/category/view.png'
 
 
 </div>
-
-      <div className="row">
+<div className="row">
+  
     {/* <img src={e} alt="Girl in a jacket" width="1240" height="300"/> */}
     
       
@@ -129,29 +129,31 @@ let view = '/category/view.png'
           <MessageBox variant="danger">{errorCategories}</MessageBox>
         ) : (
           <div className='row' >
-        
-  {categories.map((z) => (
+   
+            {categories.map((z) => (
               <div key={z} className="toto">
              
                 <Link 
                   className='upp' href='#top'
                   to={getFilterUrl({ category: z}, )}
                 >
+                  
                   <div className='eden'>
                <div className='row'>
-     
+              
           {z === "בעלי חיים" ? (<div className='no-dropp' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={animals} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>בעלי חיים</h1></div></div>)
           :z==='נופים'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={view} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>נופים</h1></div></div>)
           :z==='sell'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={sale} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>sell</h1></div></div>)
-          :z==='פופ ארט'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={pop} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>פופ ארט</h1></div></div>)
+          :z==='פופ ארט'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={pop} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>פופ ארט</h1></div> </div>)
           :z==='אייקון'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={icons} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>Icons</h1></div></div>)
           :z==='פרחים וטבע'?(<div className='no-dropp' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={flowers} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>פרחים וטבע</h1></div></div>)
           :z==='ערים ומקומות בעולם'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={city} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>ערים ומקומות בעולם</h1></div></div>)
           :z==='צבעי מים'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={oilColors} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>צבעי מים</h1></div></div>)
           :z==='ציורים'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={paint} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>ציורים</h1></div></div>)
           :z==='צבעי שמן'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={oilColors} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>צבעי שמן</h1></div></div>)
-          :("")} 
-  {/*<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={f} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>{z}</h1></div></div>*/}
+          :('')} 
+      
+      {/*<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={f} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>{z}</h1></div></div>*/}
  
            </div>
 
@@ -163,9 +165,11 @@ let view = '/category/view.png'
                      
 
           </div>
+          
         )}
 
 </div>
+
       <div>
      
         <BrowserRouter>
@@ -184,6 +188,7 @@ let view = '/category/view.png'
         ></Route>
 
         )}
+        
           </div>
          
         {loading ? (
