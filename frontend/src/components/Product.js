@@ -27,10 +27,11 @@ export default function Product(props) {
           numReviews={product.numReviews}
         ></Rating> */}
         <div className="tryingg">החל מ ₪{product.price }</div> 
+          {/*
         <Link to={`/product/${product._id}`}>
         <input  to={`/product/${product._id}`} type="submit" value="הוסף לעגלת קניות " id="buttonn-blue"/>
         </Link>
-       
+     */}
           
       </div>
     

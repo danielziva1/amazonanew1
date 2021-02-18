@@ -96,7 +96,7 @@ import { CART_ADD_ITEM } from '../constants/cartConstants';
      
                <ul className ='col-22'>
                  <li >
-                   <h1 className='z omi'>{product.name}</h1>
+                   <h1 className='zomi'>{product.name}</h1>
                  </li>
             
                  <li>   <div className='tryinggg'> ₪{product.price}</div>
@@ -116,7 +116,7 @@ import { CART_ADD_ITEM } from '../constants/cartConstants';
                </ul>
              </div>
              <div className="col-1">
-               <div className="card cardaa-body">
+               <div className="card card-body">
                  
                  <ul>
               
@@ -1592,3 +1592,5 @@ import { CART_ADD_ITEM } from '../constants/cartConstants';
   );
 }
 */}
+
+

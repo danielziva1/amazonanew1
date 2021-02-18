@@ -99,7 +99,7 @@ let view = '/category/view.png'
 <div className='g'>
 
 
-<Carousel    showArrows autoPlay showThumbs={false}>
+<Carousel    showArrows autoPlay={false} showThumbs={false}>
 
      
         <img src={tr} alt={tr}  width="240"  />

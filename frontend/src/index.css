@@ -234,7 +234,7 @@ img {
   border-radius: 0.5rem;
 }
 img.medium {
-  max-width: 24.6rem;
+  max-width: 26.6rem;
   max-height: 19.5rem;
   width: 100%;
   min-height: 19.5rem;
@@ -334,6 +334,7 @@ img.small {
 
   padding: 1rem;
   position: relative;
+  background-color: #292c2f;
 
 
 }
@@ -347,7 +348,7 @@ img.small {
 
 .card-body > * {
   margin-bottom: 0.5rem;
-  color: #203040;
+  color: #ffffff;
  
   
 }
@@ -402,6 +403,23 @@ img.medium {
   padding: 0.5rem;
 }
 .table button {
+  margin: 0 0.2rem;
+}
+.table1 {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table1 tbody tr:nth-of-type(odd) {
+  background-color: #f4f4f4;
+}
+.table1 td,
+.table1 th {
+  
+  text-align: center;
+  border: 0.1rem solid #ffffff;
+  padding: 0.5rem;
+}
+.table1 button {
   margin: 0 0.2rem;
 }
 /* Aside */
@@ -586,15 +604,15 @@ button.close-sidebar {
   box-shadow: 2 1 1 2 rgb(0, 0, 0);
   transition: 0.9s;
 
-  width: 250px;
-  height: 318px;
+  width: 270px;
+  height: 300px;
   
 }
 .carda:hover {
 
   background-color: #ffffff;
   
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.2);
 }
 .carda-body {
   
@@ -609,7 +627,7 @@ button.close-sidebar {
 	position:fixed;
 	width:60px;
 	height:60px;
-	bottom:20px;
+	bottom:40px;
 left: 5px;
 	background-color:#25d366;
 	color:#FFF;
@@ -670,7 +688,9 @@ footer{
 	font: bold 20px sans-serif;
   height: 250px;
   direction: rtl;
-	margin-top: 80px;
+  margin-top: 80px;
+  position: relative;
+  bottom: 0px;
 }
  
 .footer-distributed .footer-left,
@@ -1413,10 +1433,24 @@ background-color: rgb(51, 8, 8);
 
 .trying{
   text-align: center;
- 
-  text-decoration-style: solid;
-opacity: 0.7;
 
+  text-decoration-style: dotted ;
+
+-webkit-text-decoration: rgb(201, 197, 230) solid underline;
+  text-decoration: rgb(191, 187, 216) solid underline;
+  -webkit-text-underline-position: under;
+  text-underline-position: under;
+
+}
+.po{
+  position: relative;
+  right: 120px;
+}
+.under {
+  -webkit-text-decoration: rgb(143, 142, 150) solid underline;
+  text-decoration: rgb(169, 166, 194) solid underline;
+  -webkit-text-underline-position: under;
+  text-underline-position: under;
 }
 .tryingg{
   text-align: center;
@@ -1444,6 +1478,7 @@ opacity: 0.7;
   padding: 3rem;
   opacity: 0.70;
   direction: rtl;
+ padding-bottom:  530px;
 }
 .edd{
   background-color: rgb(0, 0, 0);
@@ -1520,3 +1555,54 @@ padding: 2rem;
   max-width: 1000px;
   margin-right: 200px;
 }
+
+
+
+
+
+
+
+
+
+
+
+a:hover {
+  color: #53b558;
+}
+
+.btn:hover {
+  color: #fff;
+  background: #429188;
+}
+
+
+
+
+.color {
+  width: 1px;
+  height: 40px;
+  right: -40px;
+}
+
+.red {
+  background: #53b5aa;
+}
+.redi {
+ color: #53b5aa;
+}
+
+table, th, td {
+  border-collapse: collapse;
+}
+
+.line2{}
+.yellow {
+  background: #f1c40f;
+}
+
+.blue {
+  background: #3598dc;
+}
+
+
+
