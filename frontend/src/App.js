@@ -68,7 +68,11 @@ function App() {
     <BrowserRouter>
    
       <div className="grid-container">  
+      <div className='deliveryy'> משלוח אקספרס חינם בהזמנה מעל 299 ₪
+</div>
+         
         <header className="row">
+      
           <div>
             
           <button

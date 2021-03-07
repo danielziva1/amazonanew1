@@ -495,11 +495,23 @@ button.close-sidebar {
 
 }
 .g{
-  margin-right: 4px;
-  margin-left: 4px;
+  border-radius: 1rem 0 0 1rem;
+
+position: relative;
+background-size:auto; /* Resize the background image to cover the entire container */
+background-position: right; /* Center the image */
 }
 
+.au{
 
+
+
+    min-height: 100px; /* You must set a specified height */
+    margin-left: 1px;
+    background-position: left; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size:auto; /* Resize the background image to cover the entire container */
+  }
 .whatsapp{
   position: sticky;
   top: 550px;
@@ -638,7 +650,7 @@ left: 5px;
   z-index:100;
   
 }
-
+  
 .my-floata{
 	margin-top:16px;
 }
@@ -1170,11 +1182,23 @@ input:focus, textarea:focus {
 .delivery{
   color: rgb(255, 255, 255);
   background-color:  #0800069a;
-  font-size: 40px;
+  font-size: 46px;
   direction: rtl;
   text-align: center;
   padding: 1rem;
+  margin-left: 5.1px;
+  margin-right: 5px;
 }
+.deliveryy{
+  color: rgb(255, 255, 255);
+  background-color:  #0800069a;
+  font-size: 46px;
+  direction: rtl;
+  text-align: center;
+border: #000;
+
+}
+
 
 .shipi{
   color: rgb(255, 255, 255);
@@ -1359,7 +1383,6 @@ font-size: 30px;
  height: 18.0rem;
 
 
-
  margin-top: 10px;
 
 
@@ -1392,8 +1415,9 @@ bottom: 65px;
   
  
 }
-.alt{
-
+.altt{
+  position: relative;
+left: 16px;
 
 }
 
@@ -1414,8 +1438,24 @@ bottom: 65px;
  }
 
 
+ .no-dropp {
+  display: inside;
+  white-space: nowrap;
+position: relative;
 
 
+  
+ }
+ .no-droppp {
+  display: inside;
+  white-space: nowrap;
+position: relative;
+
+  
+ }
+  .oni{
+    margin: 2rem;
+  }
 .piciiz{
   height: 1px;
   width: 10000px;

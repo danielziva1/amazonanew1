@@ -93,9 +93,9 @@ let view = '/category/view.png'
     
     <div >
        
-      
-            <div className='delivery'> משלוח אקספרס חינם בהזמנה מעל 299 ₪
-</div>
+    {/*   <div className='deliveryy'> משלוח אקספרס חינם בהזמנה מעל 299 ₪
+</div> */}
+            
 <div className='g'>
 
 
@@ -128,8 +128,9 @@ let view = '/category/view.png'
         ) : errorCategories ? (
           <MessageBox variant="danger">{errorCategories}</MessageBox>
         ) : (
+          <div className='oni'>
           <div className='row' >
-   
+
             {categories.map((z) => (
               <div key={z} className="toto">
              
@@ -141,17 +142,24 @@ let view = '/category/view.png'
                   <div className='eden'>
                <div className='row'>
               
-          {z === "בעלי חיים" ? (<div className='no-dropp' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={animals} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>בעלי חיים</h1></div></div>)
-          :z==='נופים'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={view} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>נופים</h1></div></div>)
-          :z==='sell'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={sale} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>sell</h1></div></div>)
-          :z==='פופ ארט'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={pop} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>פופ ארט</h1></div> </div>)
-          :z==='אייקון'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={icons} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>Icons</h1></div></div>)
-          :z==='פרחים וטבע'?(<div className='no-dropp' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={flowers} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>פרחים וטבע</h1></div></div>)
-          :z==='ערים ומקומות בעולם'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={city} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>ערים ומקומות בעולם</h1></div></div>)
-          :z==='צבעי מים'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={oilColors} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>צבעי מים</h1></div></div>)
-          :z==='ציורים'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={paint} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>ציורים</h1></div></div>)
-          :z==='צבעי שמן'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={oilColors} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>צבעי שמן</h1></div></div>)
-          :('')} 
+          {
+           z==='בעלי חיים'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={animals} alt="" width="280"  height="180"></img> <h1 className='bot'>בעלי חיים</h1></div></div>)
+          :z==='נופים'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={view} alt="" width="280"  height="180"></img> <h1 className='bot'>נופים</h1></div></div>)
+          :z==='sell'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={sale} alt="" width="280"  height="180"></img> <h1 className='bot'>sell</h1></div></div>)
+          :z==='פופ ארט'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={pop} alt="" width="280"  height="180"></img> <h1 className='bot'>פופ ארט</h1></div> </div>)
+          :z==='אייקון'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={icons} alt="" width="280"  height="180"></img> <h1 className='bot'>Icons</h1></div></div>)
+          :z==='פרחים וטבע'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={flowers} alt="" width="280"  height="180"></img> <h1 className='bot'>פרחים וטבע</h1></div></div>)
+          :z==='ערים ומקומות בעולם'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={city} alt="" width="280"  height="180"></img> <h1 className='bot'>ערים ומקומות בעולם</h1></div></div>)
+          :z==='צבעי מים'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={oilColors} alt="" width="280"  height="180"></img> <h1 className='bot'>צבעי מים</h1></div></div>)
+         
+          :z==='ציורים'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={paint} alt="" width="280"  height="180"></img> <h1 className='bot'>ציורים</h1></div></div>)
+          :z==='sample category'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={paint} alt="" width="280"  height="180"></img> <h1 className='bot'>sample</h1></div></div>)
+         
+          :z==='דוגמה'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={paint} alt="" width="280"  height="180"></img> <h1 className='bot'>דוגמה</h1></div></div>)
+          :z==='צבעי שמן'&&(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={oilColors} alt="" width="280"  height="180"></img> <h1 className='bot'>צבעי שמן</h1></div></div>)
+      
+         
+    } 
       
       {/*<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={f} alt="Girl in a jacket" width="217"  height="180"></img> <h1 className='bot'>{z}</h1></div></div>*/}
  
@@ -161,8 +169,8 @@ let view = '/category/view.png'
                 </Link>
             
               </div>
-            ))}
-                     
+            )) }
+               </div>      
 
           </div>
           
