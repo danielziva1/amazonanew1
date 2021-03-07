@@ -96,6 +96,10 @@ function App() {
                 <span className="badge">{cartItems.length}</span>
               )}
             </Link>
+            <Link to="/signin"> 
+                <PersonOutlineIcon   fontSize ='large'></PersonOutlineIcon>
+                
+                </Link>
             <Link to="/">
         עמוד הבית
             </Link>
@@ -119,10 +123,7 @@ function App() {
                 </ul>
               </div>
             ) : (
-              <Link to="/signin"> 
-                <PersonOutlineIcon   fontSize ='large'></PersonOutlineIcon>
-                
-                </Link>
+              <></>
              
             )}
                {userInfo && userInfo.isSeller && (
@@ -162,7 +163,9 @@ function App() {
                 
               </div>
             )}
-              {userInfo && userInfo.isAdmin && (
+         
+               <Link to="/about">קצת עלינו</Link>
+           
               <div className="dropdown">
                 <Link to="#admin">
                  קטגוריות <i className="fa fa-caret-down"></i>
@@ -197,10 +200,7 @@ function App() {
                 </ul>
                 
               </div>
-            )}
             
-               <Link to="/about">קצת עלינו</Link>
-               
           </div>
           {/* 
           <div>

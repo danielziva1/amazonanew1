@@ -151,10 +151,8 @@ let view = '/category/view.png'
           :z==='פרחים וטבע'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={flowers} alt="" width="280"  height="180"></img> <h1 className='bot'>פרחים וטבע</h1></div></div>)
           :z==='ערים ומקומות בעולם'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={city} alt="" width="280"  height="180"></img> <h1 className='bot'>ערים ומקומות בעולם</h1></div></div>)
           :z==='צבעי מים'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={oilColors} alt="" width="280"  height="180"></img> <h1 className='bot'>צבעי מים</h1></div></div>)
-         
           :z==='ציורים'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={paint} alt="" width="280"  height="180"></img> <h1 className='bot'>ציורים</h1></div></div>)
           :z==='sample category'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={paint} alt="" width="280"  height="180"></img> <h1 className='bot'>sample</h1></div></div>)
-         
           :z==='דוגמה'?(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={paint} alt="" width="280"  height="180"></img> <h1 className='bot'>דוגמה</h1></div></div>)
           :z==='צבעי שמן'&&(<div className='no-drop' onClick={(e) => scrollTop()}> <div className='animals'>  <img className='alt' src={oilColors} alt="" width="280"  height="180"></img> <h1 className='bot'>צבעי שמן</h1></div></div>)
       
