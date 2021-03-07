@@ -111,10 +111,10 @@ export default function CartScreen(props) {
                 ): (  '50X70'
 
                 )}
-          
+            <DeleteIcon  fontSize="large" type="button" onClick={() => removeFromCartHandler(item.product)}></DeleteIcon>
                 <div>
           
-                  <DeleteIcon  fontSize="large" type="button" onClick={() => removeFromCartHandler(item.product)}></DeleteIcon>
+             
                 </div>
               </div>
             </li>
